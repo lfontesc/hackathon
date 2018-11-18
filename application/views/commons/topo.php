@@ -383,7 +383,7 @@
                <li class="header">OUTRA ABA DE COISAS ?</li>
         <li><a href="teste.php"><i class="fa fa-circle-o text-red"></i> <span>Importante</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Cuidado</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Informações</span></a></li>
+        <li><a href="<?php echo base_url("index.php/Welcome/logar"); ?>"><i class="fa fa-circle-o text-aqua"></i> <span>Testando Login</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
