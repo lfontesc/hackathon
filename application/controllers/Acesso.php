@@ -21,8 +21,13 @@ class Acesso extends CI_Controller {
 
     public function index() {
         $this->verificar_sessao();
+        $this->load->Model('admin/ModelPoste','',TRUE);
+        $dados['totalPoste'] = $this->ModelPoste->totalPoste();
+        $dados['totalDispo'] = $this->ModelPoste->totalDispo();
+       // $dados['totalRegular'] = $this->ModelPoste->totalRegular();
+        //$dados['totalIrre'] = $this->ModelPoste->totalIrre();
         $this->load->view('commons/topo');
-        $this->load->view('index');
+        $this->load->view('index', $dados);
         $this->load->view('commons/footer');
        
     }

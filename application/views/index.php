@@ -6,14 +6,14 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h3>150.100</h3>
+            <h3><?php echo $totalPoste;?></h3>
 
             <p>Postes Cadastrados</p>
           </div>
           <div class="icon">
-            <i class="ion ion-bag"></i>
+            <i class="ion ion-stats-bars"></i>
           </div>
-          <a href="#" class="small-box-footer">Ler Mais...<i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo base_url('ControlPoste/listaPostes');?>" class="small-box-footer">Ver Postes <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -26,9 +26,9 @@
             <p>Postes Regulares</p>
           </div>
           <div class="icon">
-            <i class="ion ion-stats-bars"></i>
+            <i class="ion ion-checkmark"></i>
           </div>
-          <a href="#" class="small-box-footer">Ler Mais... <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo base_url('ControlPoste/listaPostes');?>" class="small-box-footer">Ver Postes <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -37,13 +37,12 @@
         <div class="small-box bg-red">
           <div class="inner">
             <h3>65</h3>
-
             <p>Postes Irregulares</p>
           </div>
           <div class="icon">
-            <i class="ion ion-pie-graph"></i>
+            <i class="ion ion-close"></i>
           </div>
-          <a href="#" class="small-box-footer">Ler Mais... <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo base_url('ControlPoste/listaPostesIrreg');?>" class="small-box-footer">Ver Postes <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
     
@@ -52,14 +51,14 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
           <div class="inner">
-            <h3>dsdssdsd</h3>
+            <h3><?php echo $totalDispo;?></h3>
 
-            <p>dsdsdsds</p>
+            <p>Disponivel para Contratos</p>
           </div>
           <div class="icon">
-            <i class="ion ion-person-add"></i>
+            <i class="ion ion-ios-paper"></i>
           </div>
-          <a href="#" class="small-box-footer">Ler Mais...<i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo base_url('ControlPoste/listaPostesDispo');?>" class="small-box-footer">Ver Postes <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -68,8 +67,9 @@
     <!-- Main row -->
     <div class="row">
       <!-- Left col -->
-      <section class="col-lg-7 connectedSortable">
+      <section class="col-lg-12 connectedSortable">
         
+      <div id="map" style="width: 100%; height: 500px;"></div>
           Conteudo das Paginas Aqui
       </section>
       <!-- right col -->

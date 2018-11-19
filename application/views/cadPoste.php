@@ -84,7 +84,7 @@
                   
                   <!-- select -->
                   <div class="form-group">
-                  <label for="senha" class="col-sm-2 control-label">Responsavel pelo Cadastro</label>
+                  <label for="id_user" class="col-sm-2 control-label">Responsavel pelo Cadastro</label>
                   <select name="id_user" class="form-control">
              <?php     if (isset($user)) {
                               foreach ($user as $user) {

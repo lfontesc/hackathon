@@ -87,4 +87,31 @@ class ControlPoste extends CI_Controller {
         $this->load->view('cadPoste.php',$dados);
         $this->load->view('commons/footer');
     }
+
+    public function listaPostesDispo() {
+        $this->verificar_sessao();
+        $this->load->Model('admin/modelPoste', '', TRUE);
+        $dados['poste'] = $this->modelPoste->selecionarTodosPostesDispo();
+        $this->load->view('commons/topo');
+        $this->load->view('listaPostes',$dados);
+        $this->load->view('commons/footer');
+    }
+
+    public function listaPostesIrreg() {
+        $this->verificar_sessao();
+        $this->load->Model('admin/modelPoste', '', TRUE);
+        $dados['poste'] = $this->modelPoste->selecionarTodosPostesIrreg();
+        $this->load->view('commons/topo');
+        $this->load->view('listaPostes',$dados);
+        $this->load->view('commons/footer');
+    }
+
+    public function listaPosteReg() {
+        $this->verificar_sessao();
+        $this->load->Model('admin/modelPoste', '', TRUE);
+        $dados['poste'] = $this->modelPoste->selecionarTodosPostesReg();
+        $this->load->view('commons/topo');
+        $this->load->view('listaPostes',$dados);
+        $this->load->view('commons/footer');
+    }
 }

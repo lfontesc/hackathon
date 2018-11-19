@@ -34,5 +34,39 @@ class ModelPoste extends CI_Model {
         return $this->db->update('poste', $poste);
     }
     
-    
+    public function totalPoste() {
+        $query = $this->db->query('SELECT * FROM poste');
+        return $query->num_rows();
+    }
+
+    public function totalDispo() {
+        $this->db->select();
+        $this->db->from('poste');
+        $this->db->where('n_cabos < 5');
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+
+    public function selecionarTodosPostesDispo() {
+        $resultado = $this->db->query("select * from poste where n_cabos < 5");
+        if ($resultado->num_rows() > 0) {
+            return $resultado->result();
+        }
+        return;
+    }
+    public function selecionarTodosPostesIrreg($op) {
+        $resultado = $this->db->query("select * from poste where id_tipo_irregularidade != null");
+        if ($resultado->num_rows() > 0) {
+            return $resultado->result();
+        }
+        return;
+    }
+
+    public function selecionarTodosPostesReg() {
+        $resultado = $this->db->query("select * from poste where id_tipo_irregularidade = null");
+        if ($resultado->num_rows() > 0) {
+            return $resultado->result();
+        }
+        return;
+    }
 }

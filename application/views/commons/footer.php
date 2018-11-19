@@ -202,6 +202,45 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
+
+  <script type="text/javascript">
+
+
+var locations = [
+  [-3.78410515371693, -38.5187379714051],
+  [-3.79018865734279, -38.6242412224957],
+  [-3.78682605710868, -38.6229648855265]
+];
+
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 10,
+  center: new google.maps.LatLng(-3.79, -38.7),
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+for (i = 0; i < locations.length; i++) { 
+    
+    var pinColor = "FF0000";
+  
+    var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+    new google.maps.Size(21, 34),
+    new google.maps.Point(0,0),
+    new google.maps.Point(10, 34));
+var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+    new google.maps.Size(40, 37),
+    new google.maps.Point(0, 0),
+    new google.maps.Point(12, 35));
+
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][0], locations[i][1]),
+        icon: pinImage,
+        shadow: pinShadow
+    });
+    
+    marker.setMap(map);
+}
+
+
+</script>
 <script src="<?php echo base_url('bower_components/jquery/dist/jquery.min.js');?>"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="<?php echo base_url('bower_components/jquery-ui/jquery-ui.min.js');?>"></script>
