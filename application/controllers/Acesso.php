@@ -24,11 +24,13 @@ class Acesso extends CI_Controller {
         $this->load->Model('admin/ModelPoste','',TRUE);
         $dados['totalPoste'] = $this->ModelPoste->totalPoste();
         $dados['totalDispo'] = $this->ModelPoste->totalDispo();
+        $dados['listaPostes'] = $this->ModelPoste->selecionarTodosMap();
+        $dados['postes'] = $this->ModelPoste->totalPoste();
        // $dados['totalRegular'] = $this->ModelPoste->totalRegular();
         //$dados['totalIrre'] = $this->ModelPoste->totalIrre();
         $this->load->view('commons/topo');
         $this->load->view('index', $dados);
-        $this->load->view('commons/footer');
+        $this->load->view('commons/footer',$dados);
        
     }
 

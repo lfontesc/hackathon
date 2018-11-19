@@ -16,6 +16,15 @@ class ModelPoste extends CI_Model {
         }
         return;
     }
+
+    public function selecionarTodosMap() {
+        $resultado = $this->db->get('poste');
+        if ($resultado->num_rows() > 0) {
+            return $resultado->result_array();
+        }
+        return;
+    }
+
      public function selecionarUnicoPoste($id_poste) {
         $resultado = $this->db->query("select * from poste where id_poste = '$id_poste'");
         if ($resultado->num_rows() > 0) {

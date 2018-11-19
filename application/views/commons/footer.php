@@ -206,38 +206,45 @@
   <script type="text/javascript">
 
 
-var locations = [
-  [-3.78410515371693, -38.5187379714051],
-  [-3.79018865734279, -38.6242412224957],
-  [-3.78682605710868, -38.6229648855265]
-];
-
 var map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 10,
-  center: new google.maps.LatLng(-3.79, -38.7),
+  zoom: 15,
+  center: new google.maps.LatLng(-7.228971, -39.370678),
   mapTypeId: google.maps.MapTypeId.ROADMAP
 });
-for (i = 0; i < locations.length; i++) { 
+
+  <?php if (isset($listaPostes)){
+    foreach ($listaPostes as $listaPostes){
+      if($listaPostes['n_cabos'] <= 5){
+        ?>
+        var pinColor = "00a65a";
+      <?php } else{
+        ?>
+        var pinColor = "dd4b39";
+      <?php
+    }?>
+      
+  
     
-    var pinColor = "FF0000";
   
     var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
     new google.maps.Size(21, 34),
     new google.maps.Point(0,0),
     new google.maps.Point(10, 34));
-var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+    var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
     new google.maps.Size(40, 37),
     new google.maps.Point(0, 0),
     new google.maps.Point(12, 35));
 
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][0], locations[i][1]),
+        position: new google.maps.LatLng(<?php echo $listaPostes['latitude']?>, <?php echo $listaPostes['longitude']?>),
         icon: pinImage,
         shadow: pinShadow
     });
     
     marker.setMap(map);
-}
+
+    <?php }};?>
+
 
 
 </script>
