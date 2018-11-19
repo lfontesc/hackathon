@@ -47,7 +47,7 @@
                     </div>
                 <?php } ?>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="login" placeholder="E-mail">
+        <input type="text" class="form-control" name="login" placeholder="Usuário">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">

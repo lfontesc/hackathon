@@ -21,14 +21,14 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
-            <h3>40<sup style="font-size: 20px">%</sup></h3>
+            <h3><?php echo $totalRegular ?></sup></h3>
 
             <p>Postes Regulares</p>
           </div>
           <div class="icon">
             <i class="ion ion-checkmark"></i>
           </div>
-          <a href="<?php echo base_url('ControlPoste/listaPostes');?>" class="small-box-footer">Ver Postes <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo base_url('Acesso/listaPostesRegular');?>" class="small-box-footer">Ver Postes <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -36,13 +36,13 @@
         <!-- small box -->
         <div class="small-box bg-red">
           <div class="inner">
-            <h3>65</h3>
+            <h3><?php echo $totalIrreg ?></h3>
             <p>Postes Irregulares</p>
           </div>
           <div class="icon">
             <i class="ion ion-close"></i>
           </div>
-          <a href="<?php echo base_url('ControlPoste/listaPostesIrreg');?>" class="small-box-footer">Ver Postes <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo base_url('Acesso/listaPostesIrreg');?>" class="small-box-footer">Ver Postes <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
     

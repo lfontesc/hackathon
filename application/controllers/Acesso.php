@@ -26,14 +26,33 @@ class Acesso extends CI_Controller {
         $dados['totalDispo'] = $this->ModelPoste->totalDispo();
         $dados['listaPostes'] = $this->ModelPoste->selecionarTodosMap();
         $dados['postes'] = $this->ModelPoste->totalPoste();
-       // $dados['totalRegular'] = $this->ModelPoste->totalRegular();
-        //$dados['totalIrre'] = $this->ModelPoste->totalIrre();
+        $dados['totalRegular'] = $this->ModelPoste->totalRegular();
+       $dados['totalIrreg'] = $this->ModelPoste->totalIrreg();
+       $dados['listaPostesIrreg'] = $this->ModelPoste->listaPostesRegular();
+       $dados['listaPostesRegular'] = $this->ModelPoste ->listaPostesRegular();
         $this->load->view('commons/topo');
         $this->load->view('index', $dados);
         $this->load->view('commons/footer',$dados);
        
     }
 
+
+    public function listaPostesRegular(){
+        $this->load->Model('admin/ModelPoste','',TRUE);
+
+        $dados['listaPostesRegular'] = $this->ModelPoste->listaPostesRegular();
+        $this->load->view('commons/topo');
+        $this->load->view('listaPostesRegular', $dados);
+        $this->load->view('commons/footer',$dados);
+    }
+    public function listaPostesIrreg(){
+        $this->load->Model('admin/ModelPoste','',TRUE);
+
+        $dados['listaPostesIrreg'] = $this->ModelPoste->listaPostesIrreg();
+        $this->load->view('commons/topo');
+        $this->load->view('listaPostesIrreg', $dados);
+        $this->load->view('commons/footer',$dados);
+    }
     public function LogarAll() {
         $this->load->Model('admin/ModelAcesso','',TRUE);
         $login = $this->input->post('login');

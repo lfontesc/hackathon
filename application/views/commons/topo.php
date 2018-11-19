@@ -71,13 +71,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php echo base_url('dist/img/user2-160x160.jpg');?>" class="user-image" alt="User Image">
+              <img src="<?php echo base_url('dist/img/avatar.png');?>" class="user-image" alt="User Image">
               <span class="hidden-xs"> <?php echo $this->session->userdata('username'); ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="<?php echo base_url('dist/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
+                <img src="<?php echo base_url('dist/img/avatar.png');?>" class="img-circle" alt="User Image">
 
                 <p>
                 <?php echo $this->session->userdata('username');?> - Web Developer
@@ -111,7 +111,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<?php echo base_url('dist/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
+          <img src="<?php echo base_url('dist/img/avatar.png');?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p> <?php echo $this->session->userdata('username'); ?> </p>
@@ -126,14 +126,14 @@
         
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Cadastros</span>
+            <i class="fa fa-edit"></i> <span>Cadastros</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?php echo base_url('ControlUsuario/cadastroUsuario'); ?>"><i class="fa fa-users"></i> Usuarios</a></li>
-            <li><a href="<?php echo base_url('ControlPoste/cadastroPoste'); ?>"><i class="fa fa-circle-o"></i> Postes </a></li>
+            <li class="active"><a href="<?php echo base_url('ControlUsuario/cadastroUsuario'); ?>"><i class="fa fa-user"></i> Usuario</a></li>
+            <li><a href="<?php echo base_url('ControlPoste/cadastroPoste'); ?>"><i class="fa fa-circle-o"></i> Poste </a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -145,9 +145,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('ControlUsuario/listaUsuarios'); ?>"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+            <li><a href="<?php echo base_url('ControlUsuario/listaUsuarios'); ?>"><i class="fa fa-users"></i> Usuarios</a></li>
             <li><a href="<?php echo base_url('ControlPoste/listaPostes'); ?>"><i class="fa fa-circle-o"></i> Postes</a></li>
-            <li><a href="<?php echo base_url('Acesso/teste');?>"><i class="fa fa-circle-o"></i> Fixed</a></li>
           </ul>
         </li>
         
