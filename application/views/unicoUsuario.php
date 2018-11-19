@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="box">
-            <div class="box-header with-border">Usuario
+            <div class="box-header with-border"><h3>Usuario</h3>
 
 <?php
          if (isset($user)) {
@@ -34,6 +34,7 @@
                 </div>
                 <div class="col-xs-12 col-lg-12">
                   <div class="col-xs-12 col-lg-12">
+                  <h2 class="page-header"><a class="btn btn-primary" href="<?php echo base_url("index.php/ControlUsuario/editarUsuario/$user->id_user") ?>"><span class="glyphicon glyphicon-edit"></span> Editar</a>
                       <a class="btn btn-danger" href="javascript:func()" onclick="excluirUsuario(<?php echo $user->id_user; ?>)"><span class="glyphicon glyphicon-remove"></span> Excluir</a>
                     </h2>
                     

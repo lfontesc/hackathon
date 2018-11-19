@@ -342,7 +342,7 @@
           </a>
           <ul class="treeview-menu">
             <li class="active"><a href="<?php echo base_url('ControlUsuario/cadastroUsuario'); ?>"><i class="fa fa-users"></i> Usuarios</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Etc ... </a></li>
+            <li><a href="<?php echo base_url('ControlPoste/cadastroPoste'); ?>"><i class="fa fa-circle-o"></i> Postes </a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -355,7 +355,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url('ControlUsuario/listaUsuarios'); ?>"><i class="fa fa-circle-o"></i> Usuarios</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
+            <li><a href="<?php echo base_url('ControlPoste/listaPostes'); ?>"><i class="fa fa-circle-o"></i> Postes</a></li>
             <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
             <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
           </ul>

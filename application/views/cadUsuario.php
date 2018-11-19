@@ -38,13 +38,18 @@
                             ?>"> 
                             <input type="hidden" name="id_user" value="<?php
                             if (isset($user)) {
-                                foreach ($users as $user) {
+                                foreach ($user as $user) {
                                     echo $user->id_user;
                                 }
                             }
                             ?>">
                   <label for="text" class="col-sm-2 control-label">Nome de Usuario</label>
-
+             <?php     if (isset($user)) {
+                                            foreach ($user as $user) {
+                                                echo $user->username;
+                                            }
+                                        }
+                                        ?>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="username" placeholder="nome de usuario">
                   </div>
