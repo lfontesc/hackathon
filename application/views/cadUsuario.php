@@ -71,7 +71,7 @@
 
                     <label>
 
-                      <input type="radio" name="id_tipouser" id="id_tipouser" value="0" checked>
+                      <input type="radio" name="id_tipouser" id="id_tipouser" value="0">
                       Engenheiro
                     </label>
                   </div>
