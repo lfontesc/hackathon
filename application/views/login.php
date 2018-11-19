@@ -36,15 +36,32 @@
   <div class="login-box-body">
     <p class="login-box-msg">Logue para iniciar a sessão</p>
 
-    <form action="../../index2.html" method="post">
+    <?php echo form_open('/Acesso/logarAll'); ?>
+                <?php if (isset($alert)) { ?>
+                    <div class="alert alert-warning alert-dismissable" >
+                        <button type="button" class="close" data-dismiss="alert" aria-label="close">&times</button>
+                        <?php
+                        $a = explode('-', isset($alert) ? $alert : '');
+                        echo $a[1];
+                        ?>
+                    </div>
+                <?php } ?>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="E-mail">
+        <input type="text" class="form-control" name="login" placeholder="E-mail">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Senha">
+        <input type="password" class="form-control" name="senha" placeholder="Senha">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
+
+          <div class="form-group has-feedback">
+                    <select name="tipoUsuario" class="form-control" id="" required>
+                        <option value="e">Engenharia</option>
+                        <option value="c">Campo</option>
+                    </select>
+          </div>
+
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
@@ -59,7 +76,7 @@
         </div>
         <!-- /.col -->
       </div>
-    </form>
+      <?php echo form_close(); ?>
     <!-- /.social-auth-links -->
 
     <a href="#">Esqueci minha senha</a><br>
